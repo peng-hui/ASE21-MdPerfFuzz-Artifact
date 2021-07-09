@@ -61,12 +61,8 @@ MdPerfFuzz is under [MIT License](LICENSE.md).
 
 ## Authors
 
-Penghui Li (corresponding author) 
-- <phli@cse.cuhk.edu.hk>
-- GitHub: peng-hui
+- Penghui Li (<phli@cse.cuhk.edu.hk>)
 
-Yinxi Liu 
-- <yxliu@cse.cuhk.edu.hk>
+- Yinxi Liu (<yxliu@cse.cuhk.edu.hk>)
 
-Wei Meng 
-- <wei@cse.cuhk.edu.hk>
+- Wei Meng (<wei@cse.cuhk.edu.hk>)
