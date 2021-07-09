@@ -8,6 +8,7 @@ afl-g++
 afl-gcc
 afl-gotcpu
 afl-showmap
+afl-showmax
 afl-tmin
 as
 

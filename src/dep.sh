@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get -y install cmake uuid-dev 
+sudo apt-get -y install cmake uuid-dev python3 python3-numpy python3-matplotlib
 WD=${PWD}
 
 echo core >/proc/sys/kernel/core_pattern

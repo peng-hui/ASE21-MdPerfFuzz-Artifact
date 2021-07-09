@@ -32,6 +32,7 @@ For example, to instrument [cmark](https://github.com/commonmark/cmark), we have
 cd src/apps/cmark/ # enter the source code directory of cmark
 make afl # the Makefile has hardcoded the path to AFL folder
 ```
+The instrumented binary of cmark will be generated at `src/apps/cmark/build/src/cmark`.
 
 ### Start MdPerfFuzz
 
@@ -40,7 +41,7 @@ MdPerfFuzz works similar to AFL. To detect performance bugs, you simply add an a
 ```sh
 cd src/
 #./afl-fuzz -p [-i seed-directory] [-o output-directory] [-N max-input-length] binary @@
-./afl-fuzz -p -i seeds -o cmark_out -N 64 ./apps/cmark/build/cmark @@
+./afl-fuzz -p -i seeds -o cmark_out -N 64 ./apps/cmark/build/src/cmark @@
 ```
 
 ### De-duplicate bug reports
@@ -48,10 +49,11 @@ cd src/
 Construct edge-hit vectors for each reported bug in the output directory and use the cosine similarity algorithm to de-duplicate them.
 
 ```sh
-cd src/scripts
-# python3 de-duplicate.py [instrumented-binary] [output-directory]
-python3 de-duplicate.py ./../apps/cmark/build/cmark ../cmark_out  
+cd src/
+# use ./de-duplicate.py -h to check the usage.
+./de-duplicate.py -b ./apps/cmark/build/src/cmark -i ./cmark_out -o final_out
 ```
+The text files generated in `final_out` describe the cosine similarity of bug reports.
 
 ## License
 
