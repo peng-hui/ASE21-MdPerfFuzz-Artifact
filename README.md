@@ -4,7 +4,7 @@ Markdown compilers analyze input text to generate formatted text with decorated 
 
 MdPerfFuzz is a fuzzing framework that detects performance bugs in Markdown compilers. It uses a syntax-tree based mutation strategy to efficiently generate test cases. It then applies an execution trace similarity comparison algorithm to de-duplicate the bug reports. 
 
-More information about MdPerfFuzz can be found in our [ASE '20 paper](mdperffuzz.pdf).
+More information about MdPerfFuzz can be found in our [ASE '21 paper](mdperffuzz.pdf).
 
 
 ## Build
