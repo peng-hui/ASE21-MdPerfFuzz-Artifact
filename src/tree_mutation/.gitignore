@@ -5,5 +5,4 @@ CMakeCache.txt
 Makefile
 dist
 *.o
-*.txt
 cmake_install.cmake
