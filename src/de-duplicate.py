@@ -132,8 +132,8 @@ def start(fuzzing_output, binary, final_output):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-b', '--binary', dest='binary')
-    parser.add_argument('-i', '--input', dest='fuzzing_output')
-    parser.add_argument('-o', '--output', dest='final_output')
+    parser.add_argument('-i', '--input', dest='fuzzing_output_directory')
+    parser.add_argument('-o', '--output', dest='final_output_directory')
     args = parser.parse_args()
     fail = 0
 
