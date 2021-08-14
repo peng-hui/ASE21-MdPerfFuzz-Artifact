@@ -56,7 +56,7 @@ The text files generated in `final_out` describe the cosine similarity of bug re
 
 ## License
 
-MdPerfFuzz is under [MIT License](LICENSE.md).
+MdPerfFuzz is under [MIT License](LICENSE).
 
 ## Publication
 
