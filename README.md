@@ -1,5 +1,7 @@
 # MdPerfFuzz
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5101159.svg)](https://doi.org/10.5281/zenodo.5101159)
+
 Markdown compilers analyze input text to generate formatted text with decorated styles according to the Markdown language syntaxes. Performance bugs in Markdown compilers could cause excessive resource consumption and negatively affect user experiences. They can even be leveraged by attackers for launching denial-of-service (DoS) attacks by specially crafting inputs to server-side Markdown compilers.
 
 MdPerfFuzz is a fuzzing framework that detects performance bugs in Markdown compilers. It uses a syntax-tree based mutation strategy to efficiently generate test cases. It then applies an execution trace similarity algorithm to de-duplicate the bug reports. 
@@ -60,7 +62,7 @@ MdPerfFuzz is under [MIT License](LICENSE).
 
 ## Publication
 
-More information about MdPerfFuzz can be found in our [*ASE '21 paper*](mdperffuzz.pdf).
+More information about MdPerfFuzz can be found in our ASE '21 paper.
 
 ```tex
 @inproceedings{li2021mdperffuzz,
