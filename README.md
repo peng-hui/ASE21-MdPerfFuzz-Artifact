@@ -62,7 +62,7 @@ This work was built atop other tools. Especially, the authors would like to give
 
 ## Publication
 
-More information about MdPerfFuzz can be found in our [ASE '21 paper](TODO).
+More information about MdPerfFuzz can be found in our ASE '21 paper.
 
 ```tex
 @inproceedings{li2021mdperffuzz,
