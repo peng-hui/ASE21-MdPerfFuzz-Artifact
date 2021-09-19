@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5101159.svg)](https://doi.org/10.5281/zenodo.5101159)
 
-Markdown compilers analyze input text to generate formatted text with decorated styles according to the Markdown language syntaxes. Performance bugs in Markdown compilers could cause excessive resource consumption and negatively affect user experiences. They can even be leveraged by attackers for launching denial-of-service (DoS) attacks by specially crafting inputs to server-side Markdown compilers.
+Markdown compilers analyze input text to generate formatted text with decorated styles according to the Markdown language syntaxes. Performance bugs in Markdown compilers could cause excessive resource consumption and negatively affect user experiences. They can even be leveraged by attackers for launching denial-of-service attacks by specially crafting inputs to server-side Markdown compilers.
 
 MdPerfFuzz is a fuzzing framework that detects performance bugs in Markdown compilers. It uses a syntax-tree based mutation strategy to efficiently generate test cases. It then applies an execution trace similarity algorithm to de-duplicate the bug reports. 
 
@@ -14,7 +14,7 @@ MdPerfFuzz has been tested on Debian GNU/Linux 10 (buster) and Ubuntu 18.04 LTS.
 cd src/
 ./dep.sh # this script will install the dependencies and prepare the parser
 make # build the fuzzer
-cd llvm_mode & make # build llvm mode
+cd llvm_mode & make # build AFL llvm mode
 ```
 
 ## Run
@@ -56,13 +56,13 @@ cd src/
 ```
 The text files generated in `final_out` describe the cosine similarity of bug reports.
 
-## License
+## Credit
 
-MdPerfFuzz is under [MIT License](LICENSE).
+This work was built atop other tools. Especially, the authors would like to give credit to [PerfFuzz](https://github.com/carolemieux/perffuzz) and [Superion](https://github.com/zhunki/Superion) for their amazing contributions.
 
 ## Publication
 
-More information about MdPerfFuzz can be found in our ASE '21 paper.
+More information about MdPerfFuzz can be found in our [ASE '21 paper](TODO).
 
 ```tex
 @inproceedings{li2021mdperffuzz,
@@ -73,6 +73,11 @@ More information about MdPerfFuzz can be found in our ASE '21 paper.
     year        = 2021
 }
 ```
+
+## License
+
+MdPerfFuzz is under [MIT License](LICENSE).
+
 ## Contacts
 
 - Penghui Li (<phli@cse.cuhk.edu.hk>)
