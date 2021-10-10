@@ -19,11 +19,11 @@ cd llvm_mode & make # build AFL llvm mode
 
 ## Run
 
-### Instrumentation
-When you build the testing Markdown compiler, use our customized compilers for the instrumentation. 
+### Instrument a Markdown compiler
+You shall use our customized compilers to build the testing Markdown compiler for instrumentation purposes.  
 
 - `src/afl-gcc` and `src/afl-g++`.
-- `src/afl-clang` and `src/afl-clang++`
+- `src/afl-clang` and `src/afl-clang++`.
 
 For example, to instrument [cmark](https://github.com/commonmark/cmark), we have modified the Makefile of cmark to use `src/afl-clang` for the compilation. 
 
@@ -35,7 +35,7 @@ The instrumented binary of cmark will be generated at `src/apps/cmark/build/src/
 
 ### Start MdPerfFuzz
 
-MdPerfFuzz works similar to AFL. To detect performance bugs, you simply add an argument `-p` when you start the fuzzer. The fuzzing results will be at the output directory you specify.
+MdPerfFuzz works similarly to AFL. To detect performance bugs, you simply add an argument `-p` when you start the fuzzer. The fuzzing results will be at the output directory you specify.
 
 ```sh
 cd src/
@@ -47,7 +47,7 @@ You can check the [documents](src/docs/README) of AFL for more instructions.
 
 ### De-duplicate bug reports
 
-Construct edge-hit-count vectors for each reported bug in the output directory of the fuzzing stage and use the cosine similarity algorithm to de-duplicate them.
+Construct an edge-hit-count vector for each reported bug in the output directory of the fuzzing stage and use the cosine similarity algorithm to de-duplicate them.
 
 ```sh
 cd src/
@@ -58,11 +58,11 @@ The text files generated in `final_out` describe the cosine similarity of bug re
 
 ## Credit
 
-This work was built atop other tools. Especially, the authors would like to give credit to [PerfFuzz](https://github.com/carolemieux/perffuzz) and [Superion](https://github.com/zhunki/Superion) for their amazing contributions.
+This work was built atop other tools. In particular, the authors would like to give credit to [PerfFuzz](https://github.com/carolemieux/perffuzz) and [Superion](https://github.com/zhunki/Superion) for their contributions.
 
 ## Publication
 
-More information about MdPerfFuzz can be found in our ASE '21 paper.
+More information about MdPerfFuzz can be found in our ASE '21 research paper.
 
 ```tex
 @inproceedings{li2021mdperffuzz,
