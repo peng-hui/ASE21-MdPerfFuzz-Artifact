@@ -1,4 +1,5 @@
 # MdPerfFuzz
+**Please refer to https://github.com/cuhk-seclab/MdPerfFuzz for latest updates**
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5101159.svg)](https://doi.org/10.5281/zenodo.5101159)
 
